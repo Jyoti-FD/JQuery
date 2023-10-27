@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction To JQuery</title>
+</head>
+<body>
+    <h2>Introduction To JQuery</h2>
+    <p class="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptates fuga porro rerum ex provident rem a quod molestias impedit?
+    </p>
+
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptates fuga porro rerum ex provident rem a quod molestias impedit?
+    </p>
+
+    <p class="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptates fuga porro rerum ex provident rem a quod molestias impedit?
+    </p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+        console.log($);
+
+        $(document).ready(function(){
+            console.log("document is ready");
+
+
+            $("h2").click(function(){
+                $("body").css('backgroundColor' , 'lightpink');
+                $(".para").css("color" , "green");
+                $("#para").css("color" , "blue");
+                // $("h2").css({"font-size": "50px", color: "purple"});
+                // $("h2").css({'fontSize' : '50px' , 'color' : 'chocolate'})
+                $("h2").css({fontSize : '50px', color : 'red'})
+
+                $("h2").hide(2000)
+                console.log("Clicked on H2");
+            })
+            
+          })
+    </script>
+</body>
+</html>

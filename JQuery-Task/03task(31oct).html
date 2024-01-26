@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 20px ;
+            background-color: cornflowerblue;
+            border: 2px solid black;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        ul li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-style: italic;
+            font-size: 30px;
+            padding-left: 30px ;
+        }
+        button{
+            background-color: cornflowerblue;
+            border: none;
+        }
+        .modes i{
+            height: 20px;
+            width: 40px;
+        }
+        .logo{
+            color: black;
+            font-style: italic;
+            font-size: 30px; 
+        }
+        .image img{
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            top: 250px;
+            left: 700px;
+        }
+        header{
+            position: relative;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><label for="click">LOGO</label>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="modes">
+               <button class="white"><i class="fa-solid fa-heart fa-2xl" style="color: white"></i></button>
+               <button class="pink"><i class="fa-solid fa-heart fa-2xl" style="color: pink"></i></button>
+               <button class="yellow"><i class="fa-solid fa-heart fa-2xl" style="color: yellow"></i></button>
+               <button class="green"><i class="fa-solid fa-heart fa-2xl" style="color: green"></i></button>
+               <button class="purple"><i class="fa-solid fa-heart fa-2xl" style="color: purple"></i></button>
+            </div>
+        </nav>
+        <div class="image">
+            <img src="../JQuery-Task/image/girl-removebg-preview.png" alt="">
+        </div>
+    </header>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+        $(".white").click(function () {
+            var imageul ="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/hfpqyV7B-IMG-Dubai-UAE-1200x800.jpg"
+            $console.log("ravi");
+         $('body').css("background-image","url(" + imageul + ")");
+        });
+        $(".pink").click(function () {
+         $('body').css({backgroundColor: 'pink', color: 'black'})
+        });
+        $(".yellow").click(function () {
+         $('body').css({backgroundColor: 'yellow', color: 'black'})
+        });
+        $(".green").click(function () {
+         $('body').css({backgroundColor: 'green', color: 'black'})
+        });
+        $(".purple").click(function () {
+         $('body').css({backgroundColor: 'purple', color: 'black'})
+        });
+      });
+    </script>
+</body>
+</html>

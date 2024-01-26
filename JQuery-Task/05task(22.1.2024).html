@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+#header-wrapper{
+    background: linear-gradient( rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.9) 100%),url(../06Netflix/image/netflix-background.png)no-repeat center center/cover;
+    height: 100vh;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 100px;
+}
+nav button {
+    background-color: red;
+    width: 80px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 3px;
+}
+ select {
+    padding: 8px 20px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    padding-top: 100px;
+}
+h1 {
+    font-size: 60px;
+}
+p {
+    font-size: 25px;
+}
+.container p {
+    padding-top: 30px;
+}
+.btn {
+    padding-top: 30px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.navbtn  i {
+    color: black;
+    position: absolute;
+    right: 270px;
+    top: 40px;
+}
+ input {
+    width: 450px;
+    font-size: 20px;
+    border: none;
+    color: inherit;
+    padding: 15px 5px;
+    border: 1px solid white;
+    background-color:  black;
+    opacity: 0.5;
+}
+ .btn button {
+    border: none;
+    padding: 15px;
+    width: 200px;
+    font-size: 25px;
+    background-color: red;
+    color: white;
+}
+<script src="../06Netflix/jquery-3.7.1.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+    $(".dark").click(function () {
+     $('body').css({backgroundColor: 'black', color: 'white'})
+    });
+    $(".light").click(function () {
+     $('body').css({backgroundColor: 'white', color: 'black'})
+    });
+  });
+</script>
+    </style>
+</head>
+<body>
+
+    <header id="header-wrapper">
+        <nav>
+            <div><img src="../06Netflix/image/logo.png.png" alt=""></div>
+            <div class="navbtn">
+                <select>
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Gujrati">Gujrati</option>
+                    <option value="Tamil">Tamil</option>
+                    <option value="Marathi">Marathi</option>
+                </select>
+                <button>Sign In</button>
+                 <button>THAMES
+                    <ul class="submenu">
+                        <li>
+                            <a href="#" class="light">light</a>
+                            <a href="#" class="dark">dark</a>
+                            <a href="#">Submenu</a>
+                            <a href="#">Submenu</a>
+                        </li>
+                    </ul>
+                 </button>
+            </div> 
+        </nav>
+        <div class="container">
+            <h1>Unlimited movies, TV shows and more</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="btn">
+            <input type="text" name="text" placeholder="Email address">
+            <button>Get Strated</button>
+            </div>
+        </div>
+    </header>
+
+    <script src="../jquery-3.7.1.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+        $(".dark").click(function () {
+         $('body').css({backgroundColor: 'black', color: 'white'})
+        });
+        $(".light").click(function () {
+         $('body').css({backgroundColor: 'white', color: 'black'})
+        });
+      });
+    </script>
+</body>
+</html>

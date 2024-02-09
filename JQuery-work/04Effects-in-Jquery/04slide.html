@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animate Effect In jQuery</title>
+    <title>Slide Effect In jQuery</title>
   </head>
   <body>
-    <h1>Animate Effect In jQuery</h1>
+    <h1>Slide Effect In jQuery</h1>
     <hr />
-    <button class="btnAnimate">Slide</button>
-    
-  
+    <button class="btnSlideUp">Slide Up</button>
+    <button class="btnSlidedown">Slide Down</button>
+    <button class="btnSlideToggle">Slide Toggle</button>
     <hr />
     <div class="box">This Is The Magic Of jQuery</div>
 
@@ -41,11 +41,9 @@
         color: "white",
         backgroundColor: "blueviolet",
         padding: "10px 30px",
-        marginLeft: "10px",
+        margin: "10px 30px",
         borderRadius: "20px",
         height: "200px",
-        width: "200px",
-        border: "5px solid lime",
       });
     </script>
 
@@ -55,11 +53,22 @@
       $(document).ready(function () {
         // Slide Up
 
-        $(".btnAnimate").click(function () {
-          $(".box").animate({borderRadius: '50px', marginLeft: "1080px"}, 2000);
+        $(".btnSlideUp").click(function () {
+          $(".box").slideUp(2000);
         });
 
-        
+        // Slide Down
+
+        $(".btnSlidedown").click(function () {
+          $(".box").slideDown(2000);
+        });
+
+        // Slide Toggle
+
+        $(".btnSlideToggle").click(function () {
+          $(".box").slideToggle(3000);
+        });
+
    
       });
     </script>

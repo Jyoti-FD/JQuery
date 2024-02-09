@@ -3,14 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animate Effect In jQuery</title>
+    <title>Mouse Event In jQuery</title>
   </head>
   <body>
-    <h1>Animate Effect In jQuery</h1>
-    <hr />
-    <button class="btnAnimate">Slide</button>
+    <h1>Mouse Event In jQuery</h1>
     
-  
     <hr />
     <div class="box">This Is The Magic Of jQuery</div>
 
@@ -41,11 +38,9 @@
         color: "white",
         backgroundColor: "blueviolet",
         padding: "10px 30px",
-        marginLeft: "10px",
+        margin: "10px 30px",
         borderRadius: "20px",
         height: "200px",
-        width: "200px",
-        border: "5px solid lime",
       });
     </script>
 
@@ -53,13 +48,46 @@
 
     <script>
       $(document).ready(function () {
-        // Slide Up
+        // click
 
-        $(".btnAnimate").click(function () {
-          $(".box").animate({borderRadius: '50px', marginLeft: "1080px"}, 2000);
+        $(".box").click(function () {
+          $(".box").css({backgroundColor: 'teal', color: 'khaki'});
         });
 
-        
+        // Double Click
+
+        $(".box").dblclick(function () {
+          $(".box").css({backgroundColor: 'crimson', color: 'white'});
+
+        });
+
+
+        $(".box").mouseenter(function () {
+          $(".box").css({backgroundColor: 'black', color: 'white'});
+
+        });
+
+
+        $(".box").mouseleave(function () {
+          $(".box").css({backgroundColor: 'brown', color: 'white'});
+
+        });
+
+
+        $(".box").mousedown(function () {
+          $(".box").css({backgroundColor: 'pink', color: 'black'});
+
+        });
+
+
+        $(".box").mouseup(function () {
+          $(".box").css({backgroundColor: 'blue', color: 'white'});
+
+        });
+
+
+      
+
    
       });
     </script>

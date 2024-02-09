@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animate Effect In jQuery</title>
+    <title>Hover Effect In jQuery</title>
   </head>
   <body>
-    <h1>Animate Effect In jQuery</h1>
+    <h1>Hover Effect In jQuery</h1>
     <hr />
-    <button class="btnAnimate">Slide</button>
+    <button class="btnHoverRight">Hover to Move Right</button>
+    <button class="btnHoverLeft">Hover to Move Left</button>
     
   
     <hr />
@@ -22,12 +23,11 @@
 
     <script>
       $("body").css({
-        backgroundColor: "tan",
+        backgroundColor: "pink",
         textAlign: "center",
       });
       $("h1").css({
         fontSize: "50px",
-        color: "brown",
       });
       $("button").css({
         fontSize: "20px",
@@ -55,8 +55,14 @@
       $(document).ready(function () {
         // Slide Up
 
-        $(".btnAnimate").click(function () {
-          $(".box").animate({borderRadius: '50px', marginLeft: "1080px"}, 2000);
+        $(".btnHoverRight").hover(function () {
+          $(".box").css({borderRadius: '50px', marginLeft: "1080px"}, 2000);
+          $("body").css({backgroundColor: 'purple', color: "pink"}, 10000);
+
+        });
+        $(".btnHoverLeft").hover(function () {
+          $(".box").css({borderRadius: '20px', marginLeft: "10px"}, 10000);
+          $("body").css({backgroundColor: 'pink', color: "purple"}, 10000);
         });
 
         
